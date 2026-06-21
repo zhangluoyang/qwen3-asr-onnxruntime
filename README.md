@@ -1,8 +1,8 @@
 # Qwen3-ASR ONNX + FSMN-VAD ONNX
 
-本项目用于把 Qwen3-ASR 和 FunASR FSMN-VAD 导出成 ONNX，并提供 Python / C++ 两套 ONNXRuntime 推理示例。
+ONNX Runtime inference implementation for Qwen3-ASR, providing a lightweight cross-platform speech recognition deployment solution for fast local and offline ASR.
 
-C++ 默认示例是实时流水线：Audio Producer -> audio_queue -> VAD worker -> speech_queue -> ASR worker -> result_queue。用 wav 文件测试时默认按真实音频时间推流，运行时会实时输出 speech_start、partial、final、VAD/ASR 耗时和端到端延迟到日志文件。
+项目介绍：[Qwen3-ASR 流式推理链路拆解：从模型原理到 ONNX Runtime 实现](https://zhuanlan.zhihu.com/p/2051949383655101596)
 
 ## 导出 ONNX
 
